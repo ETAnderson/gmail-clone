@@ -13,7 +13,7 @@ import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
-function Mail({}) {
+function Mail() {
     const navigate = useNavigate();
     return (
         <div className="mail">
