@@ -1,6 +1,6 @@
 import { IconButton } from '@mui/material'
 import React from 'react'
-import { Navigate } from 'react-router'
+import { useNavigate } from 'react-router'
 import './Mail.css'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MoveToInboxIcon from '@mui/icons-material/MoveToInbox';
@@ -14,11 +14,12 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
 function Mail({}) {
+    const navigate = useNavigate();
     return (
         <div className="mail">
             <div className="mail__tools">
                 <div className="mail__toolsLeft">
-                    <IconButton onClick ={() => Navigate('/')}>
+                    <IconButton onClick ={() => navigate('/')}>
                         <ArrowBackIcon />
                     </IconButton>
 
