@@ -13,6 +13,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PersonIcon from '@mui/icons-material/Person';
 import DuoIcon from '@mui/icons-material/Duo';
 import PhoneIcon from '@mui/icons-material/Phone';
+import { openSendMessage } from './features/mail/mailSlice';
 
 
 function Sidebar() {
@@ -20,7 +21,8 @@ function Sidebar() {
         <div className='sidebar'>
             <Button 
                 startIcon={<AddIcon fontside ="large"/>}
-                className="sidebar__compose" 
+                className="sidebar__compose"
+                onClick={openSendMessage} 
             >
                 Compose
             </Button>
