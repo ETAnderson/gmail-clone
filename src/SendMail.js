@@ -3,11 +3,16 @@ import './SendMail.css'
 import CloseIcon from '@mui/icons-material/Close';
 import { Button } from '@mui/material';
 import { closeSendMessage } from './features/mail/mailSlice';
+import { useForm } from 'react-hook-form';
 
 
 function SendMail() {
     // some conditional to switch state for sendMail
-    const [isOpen, setIsOpen] = useState(false);
+    const { register, handleSubmit, watch, errors } = useForm();
+
+    const onSubmit = (data) => {
+
+    }
 
     return (
         <div className="sendMail">
@@ -19,13 +24,26 @@ function SendMail() {
                 />
             </div>
 
-            <form>
-                <input placeholder="To" type="text" />   
-                <input placeholder="Subject" type="text" />
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <input 
+                    name='to' 
+                    placeholder="To" 
+                    type="text" 
+                    {...register('to', { required: true })} 
+                />   
+                <input 
+                    name='subject' 
+                    placeholder="Subject" 
+                    type="text"
+                    {...register('subject', { required: true })} 
+                />
+                <input
+                    name='message' 
                     placeholder="Message.." 
                     type="text"
-                    className="sendMail__message" />
+                    className="sendMail__message"
+                    {...register('message', { required: true })} 
+                />
 
                 <div className="sendMail__options">
                     <Button 
