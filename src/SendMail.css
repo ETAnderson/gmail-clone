@@ -47,6 +47,13 @@
     outline: none;
 }
 
+.sendMail__error {
+    background-color: white;
+    color: red;
+    text-align: right;
+    padding: 2px;
+}
+
 .sendMail__message {
     flex: 1;
 }

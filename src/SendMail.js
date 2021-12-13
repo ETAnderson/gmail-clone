@@ -8,9 +8,9 @@ import { useForm } from 'react-hook-form';
 
 function SendMail() {
     // some conditional to switch state for sendMail
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, watch, formState: { errors} } = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmit = (formData) => {
 
     }
 
@@ -30,13 +30,15 @@ function SendMail() {
                     placeholder="To" 
                     type="text" 
                     {...register('to', { required: true })} 
-                />   
+                />
+                <p className='sendMail__error'>{errors.to && <p>'An email address is required!</p>}</p>   
                 <input 
                     name='subject' 
                     placeholder="Subject" 
                     type="text"
                     {...register('subject', { required: true })} 
                 />
+                <p className='sendMail__error'>{errors.to && <p>'A subject is required!</p>}</p>
                 <input
                     name='message' 
                     placeholder="Message.." 
@@ -44,6 +46,7 @@ function SendMail() {
                     className="sendMail__message"
                     {...register('message', { required: true })} 
                 />
+                <p className='sendMail__error'>{errors.to && <p>'A message is required!</p>}</p>
 
                 <div className="sendMail__options">
                     <Button 
