@@ -1,5 +1,5 @@
 import { Checkbox, IconButton } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './EmailList.css'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import RedoIcon from '@mui/icons-material/Redo';
@@ -13,9 +13,20 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import PeopleIcon from '@mui/icons-material/People';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import EmailRow from './EmailRow';
+import db from './firebase'
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 
 
 function EmailList() {
+    const [emails, setEmails] = useState([]);
+
+    useEffect(() => {
+       const q = query(collection(db, 'emails'), orderBy("timestamp", "desc"));
+       const unsub = onSnapshot(q, (snapshot) => {
+           setEmails(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data()})))
+       })
+    }, [])
+
     return (
         <div className="emailList">
             <div className="emailList__settings">
@@ -54,18 +65,14 @@ function EmailList() {
             </div>
 
             <div className="emailList__list">
-                <EmailRow 
-                    title='dummy email'
-                    subject='placeholder message'
-                    description='placeholder description'
-                    time='placeholder time'
-                />
-                 <EmailRow 
-                    title='dummy email2'
-                    subject='placeholder message2'
-                    description='placeholder description2'
-                    time='placeholder time2'
-                />
+                {emails.map(email => (
+                    <EmailRow 
+                        to={email.data.to}
+                        subject={email.data.subject}
+                        message={email.data.message}
+                        time={email.data.timestamp}
+                    />
+                ))}
             </div>
         </div>
     )
