@@ -1,5 +1,5 @@
 import { Button, IconButton } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Sidebar.css'
 import AddIcon from '@mui/icons-material/Add';
 import InboxIcon from '@mui/icons-material/Inbox';
@@ -15,6 +15,8 @@ import DuoIcon from '@mui/icons-material/Duo';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { openSendMessage } from './features/mail/mailSlice';
 import { useDispatch } from 'react-redux';
+import { Query } from './Query';
+import { getDocs } from 'firebase/firestore';
 
 
 function Sidebar() {

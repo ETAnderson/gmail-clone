@@ -13,15 +13,15 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import PeopleIcon from '@mui/icons-material/People';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import EmailRow from './EmailRow';
-import db from './firebase'
-import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
+import { onSnapshot } from "firebase/firestore";
+import { Query } from './Query';
 
 
 function EmailList() {
     const [emails, setEmails] = useState([]);
 
     useEffect(() => {
-       const q = query(collection(db, 'emails'), orderBy("timestamp", "desc"));
+       const q = Query();
        const unsub = onSnapshot(q, (snapshot) => {
            setEmails(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data()})))
        })
