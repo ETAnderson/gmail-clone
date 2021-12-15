@@ -46,7 +46,7 @@ function EmailRow({ id, to, subject, message, time }) {
                     </span>
                 </h4>
             </div>
-            <p className="emailRow__time">{new Date(time?.toDate()).toUTCString()}</p>
+            <p className="emailRow__time">{time}</p>
         </div>
     )
 }

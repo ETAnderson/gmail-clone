@@ -71,7 +71,7 @@ function EmailList() {
                         to={email.data.to}
                         subject={email.data.subject}
                         message={email.data.message}
-                        time={email.data.timestamp}
+                        time={(email.data.timestamp.toDate()).toUTCString()}
                     />
                 ))}
             </div>
