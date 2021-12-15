@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { selectMail } from './features/mail/mailSlice'
 
-function EmailRow({ to, subject, message, time, id }) {
+
+function EmailRow({ id, to, subject, message, time }) {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -17,7 +18,7 @@ function EmailRow({ to, subject, message, time, id }) {
             to,
             subject,
             message,
-            time
+            time,
         }));
 
         navigate('/mail');

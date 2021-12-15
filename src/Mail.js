@@ -11,10 +11,15 @@ import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { useSelector } from 'react-redux';
+import { selectOpenMail } from './features/mail/mailSlice'
 
 
 function Mail() {
     const navigate = useNavigate();
+    const selectedMail = useSelector(selectOpenMail);
+    console.log(selectedMail);
+
     return (
         <div className="mail">
             <div className="mail__tools">
@@ -61,14 +66,14 @@ function Mail() {
             </div>
             <div className="mail__body">
                 <div className="mail__bodyHeader">
-                    <h2>Subject</h2>
+                    <h2>{selectedMail?.to}</h2>
                     <LabelImportantIcon className="mail__important" />
-                    <p>Title</p>
-                    <p className="mail__time">Time</p>
+                    <p>{selectedMail?.subject}</p>
+                    <p className="mail__time">{selectedMail?.time.string}</p>
                 </div>
 
                 <div className="mail__message">
-                    <p>This is a message</p>
+                    <p>{selectedMail?.message}</p>
                 </div>
             </div>
         </div>

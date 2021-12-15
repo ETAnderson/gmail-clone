@@ -67,6 +67,7 @@ function EmailList() {
             <div className="emailList__list">
                 {emails.map(email => (
                     <EmailRow 
+                        key={email.id}
                         to={email.data.to}
                         subject={email.data.subject}
                         message={email.data.message}
