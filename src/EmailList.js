@@ -74,6 +74,90 @@ function EmailList() {
                         time={(email.data.timestamp.toDate()).toUTCString()}
                     />
                 ))}
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
+                <EmailRow 
+                    to='Test'
+                    subject='click on a test email for an explanation'
+                    message='This application is a live implementation of a Firebase backend and React front end with Redux. Currently, mail composed and sent goes the inbox. The mail titled "test" are all hardcoded in order to populate the front end to see it in action'
+                    time='2:56PM'
+                />
             </div>
         </div>
     )

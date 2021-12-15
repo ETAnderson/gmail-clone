@@ -66,9 +66,9 @@ function Mail() {
             </div>
             <div className="mail__body">
                 <div className="mail__bodyHeader">
-                    <h2>{selectedMail?.to}</h2>
+                    <h2>{selectedMail?.subject}</h2>
                     <LabelImportantIcon className="mail__important" />
-                    <p>{selectedMail?.subject}</p>
+                    <p>{selectedMail?.to}</p>
                     <p className="mail__time">{selectedMail?.time.string}</p>
                 </div>
 
